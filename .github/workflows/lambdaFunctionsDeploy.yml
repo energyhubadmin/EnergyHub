@@ -19,7 +19,7 @@ jobs:
       uses: montudor/action-zip@v1
 
     - name: Zip Lambda function
-      run: zip -r function.zip .  # Adjust the command based on your Lambda function structure
+      run: cd src && zip -r function.zip .  # Adjust the command based on your Lambda function structure
 
     # - name: Deploy to AWS Lambda
     #   uses: aws-actions/aws-lambda-deploy@v1
