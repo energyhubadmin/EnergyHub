@@ -27,8 +27,8 @@ jobs:
       uses: imehedi/actions-awscli-v2@latest
       with:
         args: "lambda update-function-code \
-        --function-name: arn:aws:lambda:us-east-2:418272791131:function:Energyhub \
-        --zip-file fileb: function.zip"
+        --function-name arn:aws:lambda:us-east-2:418272791131:function:Energyhub \
+        --zip-file fileb://function.zip"
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
